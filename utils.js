@@ -5,8 +5,8 @@ export function findById(items, id){
     }
 }
 
-export function pullLocal(playerObject) {
-    const stringyPlayerObject = localStorage.getItem(playerObject);
+export function pullLocal() {
+    const stringyPlayerObject = localStorage.getItem('PLAYER');
     const player = JSON.parse(stringyPlayerObject);
     return player;
 }
@@ -15,4 +15,5 @@ export function pushLocal(playerObject){
     const stringyPlayerObject = JSON.stringify(playerObject);
     localStorage.setItem('PLAYER', stringyPlayerObject);
 }
+
 
