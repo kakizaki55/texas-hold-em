@@ -1,0 +1,263 @@
+const deck = [{
+    id: 1,
+    suit: 'club',
+    number: '2',
+    image: '../assets/cards/2C.png',
+    
+}, {
+    id: 2,
+    suit: 'club',
+    number: '3',
+    image: '../assets/cards/3C.png',
+}, {
+    id: 3,
+    suit: 'club',
+    number: '4',
+    image: '../assets/cards/4C.png',
+}, {
+    id: 4,
+    suit: 'club',
+    number: '5',
+    image: '../assets/cards/5C.png',
+}, {
+    id: 5,
+    suit: 'club',
+    number: '6',
+    image: '../assets/cards/6C.png',
+}, {
+    id: 6,
+    suit: 'club',
+    number: '7',
+    image: '../assets/cards/7C.png',
+}, {
+    id: 7,
+    suit: 'club',
+    number: '8',
+    image: '../assets/cards/8C.png',
+}, {
+    id: 8,
+    suit: 'club',
+    number: '9',
+    image: '../assets/cards/9C.png',
+}, {
+    id: 9,
+    suit: 'club',
+    number: '10',
+    image: '../assets/cards/10C.png',
+}, {
+    id: 10,
+    suit: 'club',
+    number: '11',
+    image: '../assets/cards/JC.png',
+}, {
+    id: 11,
+    suit: 'club',
+    number: '12',
+    image: '../assets/cards/QC.png',
+}, {
+    id: 12,
+    suit: 'club',
+    number: '13',
+    image: '../assets/cards/KC.png',
+}, {
+    id: 13,
+    suit: 'club',
+    number: '14',
+    image: '../assets/cards/AC.png',
+}, {
+    id: 14,
+    suit: 'diamond',
+    number: '2',
+    image: '../assets/cards/2D.png',
+}, {
+    id: 15,
+    suit: 'diamond',
+    number: '3',
+    image: '../assets/cards/3D.png',
+}, {
+    id: 16,
+    suit: 'diamond',
+    number: '4',
+    image: '../assets/cards/4D.png',
+}, {
+    id: 17,
+    suit: 'diamond',
+    number: '5',
+    image: '../assets/cards/5D.png',
+}, {
+    id: 18,
+    suit: 'diamond',
+    number: '6',
+    image: '../assets/cards/6D.png',
+}, {
+    id: 19,
+    suit: 'diamond',
+    number: '7',
+    image: '../assets/cards/7D.png',
+}, {
+    id: 20,
+    suit: 'diamond',
+    number: '8',
+    image: '../assets/cards/8D.png',
+}, {
+    id: 21,
+    suit: 'diamond',
+    number: '9',
+    image: '../assets/cards/9D.png',
+}, {
+    id: 22,
+    suit: 'diamond',
+    number: '10',
+    image: '../assets/cards/10D.png',
+}, {
+    id: 23,
+    suit: 'diamond',
+    number: '11',
+    image: '../assets/cards/JD.png',
+}, {
+    id: 24,
+    suit: 'diamond',
+    number: '12',
+    image: '../assets/cards/QD.png',
+}, {
+    id: 25,
+    suit: 'diamond',
+    number: '13',
+    image: '../assets/cards/KD.png',
+}, {
+    id: 26,
+    suit: 'diamond',
+    number: '14',
+    image: '../assets/cards/AD.png',
+}, {
+    id: 27,
+    suit: 'heart',
+    number: '2',
+    image: '../assets/cards/2H.png',
+}, {
+    id: 28,
+    suit: 'heart',
+    number: '3',
+    image: '../assets/cards/3H.png',
+}, {
+    id: 29,
+    suit: 'heart',
+    number: '4',
+    image: '../assets/cards/4H.png',
+}, {
+    id: 30,
+    suit: 'heart',
+    number: '5',
+    image: '../assets/cards/5H.png',
+}, {
+    id: 31,
+    suit: 'heart',
+    number: '6',
+    image: '../assets/cards/6H.png',
+}, {
+    id: 32,
+    suit: 'heart',
+    number: '7',
+    image: '../assets/cards/7H.png',
+}, {
+    id: 33,
+    suit: 'heart',
+    number: '8',
+    image: '../assets/cards/8H.png',
+}, {
+    id: 34,
+    suit: 'heart',
+    number: '9',
+    image: '../assets/cards/9H.png',
+}, {
+    id: 35,
+    suit: 'heart',
+    number: '10',
+    image: '../assets/cards/10H.png',
+}, {
+    id: 36,
+    suit: 'heart',
+    number: '11',
+    image: '../assets/cards/JH.png',
+}, {
+    id: 37,
+    suit: 'heart',
+    number: '12',
+    image: '../assets/cards/QH.png',
+}, {
+    id: 38,
+    suit: 'heart',
+    number: '13',
+    image: '../assets/cards/KH.png',
+}, {
+    id: 39,
+    suit: 'heart',
+    number: '14',
+    image: '../assets/cards/AH.png',
+}, {
+    id: 40,
+    suit: 'spade',
+    number: '2',
+    image: '../assets/cards/2S.png',
+}, {
+    id: 41,
+    suit: 'spade',
+    number: '3',
+    image: '../assets/cards/3S.png',
+}, {
+    id: 42,
+    suit: 'spade',
+    number: '4',
+    image: '../assets/cards/4S.png',
+}, {
+    id: 43,
+    suit: 'spade',
+    number: '5',
+    image: '../assets/cards/5S.png',
+}, {
+    id: 44,
+    suit: 'spade',
+    number: '6',
+    image: '../assets/cards/6S.png',
+}, {
+    id: 45,
+    suit: 'spade',
+    number: '7',
+    image: '../assets/cards/7S.png',
+}, {
+    id: 46,
+    suit: 'spade',
+    number: '8',
+    image: '../assets/cards/8S.png',
+}, {
+    id: 47,
+    suit: 'spade',
+    number: '9',
+    image: '../assets/cards/9S.png',
+}, {
+    id: 48,
+    suit: 'spade',
+    number: '10',
+    image: '../assets/cards/10S.png',
+}, {
+    id: 49,
+    suit: 'spade',
+    number: '11',
+    image: '../assets/cards/JS.png',
+}, {
+    id: 50,
+    suit: 'spade',
+    number: '12',
+    image: '../assets/cards/QS.png',
+}, {
+    id: 51,
+    suit: 'spade',
+    number: '13',
+    image: '../assets/cards/KS.png',
+}, {
+    id: 52,
+    suit: 'spade',
+    number: '14',
+    image: '../assets/cards/AS.png',
+}
+];
