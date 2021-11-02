@@ -1,9 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
+
 body {
     background-color: #5FAD56;
 }
 
 div {
     margin: 30px;
+}
+
+#header {
+    margin: 0;
+}
+
+h2 {
+    display: flex;
+    justify-content: center;
 }
 
 a {
@@ -19,4 +30,8 @@ img {
     float: top;
     margin: auto;
     display: flex;
+}
+
+p {
+    font-family: 'DotGothic16', sans-serif;
 }
