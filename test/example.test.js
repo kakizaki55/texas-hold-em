@@ -1,6 +1,6 @@
 
-import { createHand, createFlop, createTurn, checkFlush, checkPair } from '../game/game-utils.js';
-import { playerHand } from '../game/game.js';
+import { createHand, createFlop, createTurn, checkFlush, check4Pair, check3Pair, checkPair } from '../game/game-utils.js';
+// import { playerHand } from '../game/game.js';
 
 
 const test = QUnit.test;
@@ -352,7 +352,7 @@ test('checking to see if the pair functio nis working, 4 of a kind', (expect) =>
         image: '../assets/cards/8C.png',
     }];
     const expected = 'four-of-a-kind';
-    const actual = checkPair(minideck);
+    const actual = check4Pair(minideck);
 
     expect.equal(actual, expected);
 });
@@ -438,11 +438,11 @@ test('checking to see if the pair functio nis working, 3 of a kind', (expect) =>
         image: '../assets/cards/8C.png',
     }];
     const expected = 'three-of-a-kind';
-    const actual = checkPair(minideck);
+    const actual = check3Pair(minideck);
 
     expect.equal(actual, expected);
 });
-skip('checking to see if the pair functio nis working, 2 pair', (expect) => {
+test('checking to see if the pair functio nis working, 2 pair', (expect) => {
     const minideck = [{
         id: 1,
         suit: 'club',
