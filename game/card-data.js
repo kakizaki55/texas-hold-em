@@ -1,4 +1,4 @@
-export default [{
+const deck = [{
     id: 1,
     suit: 'club',
     number: '2',
@@ -261,3 +261,5 @@ export default [{
     image: '../assets/cards/AS.png',
 }
 ];
+
+export default deck;

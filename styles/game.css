@@ -2,7 +2,7 @@ body{
     background-color: hotpink;
 }
 
-#player-hand {
+.render-cards {
     display: flex;
     flex-direction: row;
 }
