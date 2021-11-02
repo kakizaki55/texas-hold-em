@@ -1,0 +1,52 @@
+
+body {
+    font-family: 'Press Start 2P', cursive;
+    background-color: #5fad56;
+}
+
+form {
+    margin-top: 40vw;
+}
+
+label  {
+    padding: 10px;
+    font-size: xx-large;
+    color: #B4436C;
+    -webkit-text-stroke: 1px rgb(100, 4, 109);
+}
+
+label > input {
+    font-size: x-large;
+    text-align: center;
+    font-family: 'Press Start 2P', cursive;
+    height: 12vw;
+    width: 75vw;
+    background-color: #F2C14E;
+    text-transform: uppercase;
+}
+
+footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+button {
+    font-family: 'Press Start 2P', cursive;
+    font-size: xx-large;
+    background-color: #F2C14E;
+}
+
+#money-amount {
+    font-size:xx-large;
+    font-family: 'Press Start 2P', cursive;
+    height: 10vw;
+    background-color: #F2C14E;
+    margin-bottom: 5vw;
+    border: 1px solid   black;
+}
+
+#name-input {
+    margin: 20px;
+}
+
