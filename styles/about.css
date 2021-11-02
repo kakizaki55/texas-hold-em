@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&family=Press+Start+2P&display=swap');
 
 body {
     background-color: #5FAD56;
@@ -9,12 +10,19 @@ div {
 }
 
 #header {
-    margin: 0;
+    margin: 10px;
+}
+
+#back-to-home {
+    padding: 15px;
 }
 
 h2 {
     display: flex;
     justify-content: center;
+    font-family: 'DotGothic16', sans-serif;
+    font-family: 'Press Start 2P', cursive;
+    color: #B4436C;
 }
 
 a {
@@ -30,6 +38,7 @@ img {
     float: top;
     margin: auto;
     display: flex;
+    border: 3px solid #F2C14E;
 }
 
 p {
