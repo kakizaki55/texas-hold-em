@@ -16,3 +16,9 @@ export function pushLocal(playerObject){
     localStorage.setItem('PLAYER', stringyPlayerObject);
 }
 
+export function createPlayer(formData){
+    return {
+        name: formData.get('name'),
+        souls: formData.get('money'),
+    };
+}

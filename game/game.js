@@ -51,7 +51,7 @@ const fakeHand = [{
 playerHand(fakeHand);
 
 // where player hand goes
-export function playerHand(deck){
+function playerHand(deck){
     for (let item of deck){
         const playerTable = document.getElementById('player-hand');
         const div = document.createElement('div');
@@ -71,7 +71,7 @@ export function playerHand(deck){
 
 }
 dealerHand(fakeHand);
-export function dealerHand(deck){
+function dealerHand(deck){
     for (let item of deck){
         const dealerTable = document.getElementById('dealer-hand');
         const div = document.createElement('div');
@@ -91,7 +91,7 @@ export function dealerHand(deck){
 
 }
 tableFlop(fakeHand);
-export function tableFlop(deck){
+function tableFlop(deck){
     for (let item of deck){
         const table = document.getElementById('table-hand');
         const div = document.createElement('div');
@@ -111,7 +111,6 @@ export function tableFlop(deck){
 
 }
 shuffle(fakeHand);
-
 function shuffle(array) {
     let currentIndex = array.length, randomIndex;
     while (currentIndex !== 0) {

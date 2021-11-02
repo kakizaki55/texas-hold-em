@@ -1,4 +1,4 @@
-import { pullLocal, pushLocal } from './utils.js';
+import { pullLocal, pushLocal, createPlayer } from './utils.js';
 
 
 
@@ -11,3 +11,16 @@ const playerData = {
 pushLocal(playerData);
 
 console.log(pullLocal());
+
+const userForm = document.getElementById('user-form');
+
+userForm.addEventListener('submit', (expect) =>{
+    expect.preventDefault();
+    const formData = new FormData(userForm);
+
+    const userObj = createPlayer(formData);
+
+    pushLocal(userObj);
+    window.location.replace('./game');
+    
+});
