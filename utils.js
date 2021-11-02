@@ -16,4 +16,3 @@ export function pushLocal(playerObject){
     localStorage.setItem('PLAYER', stringyPlayerObject);
 }
 
-
