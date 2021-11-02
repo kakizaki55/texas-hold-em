@@ -1,5 +1,5 @@
 
-import { createHand, createFlop, createTurn, checkFlush, check4Pair, check3Pair, checkPair } from '../game/game-utils.js';
+import { createHand, createFlop, createTurn, checkFlush, check4Pair, check3Pair, checkPair, check2Pair, checkFullHouse } from '../game/game-utils.js';
 // import { playerHand } from '../game/game.js';
 
 
@@ -395,11 +395,11 @@ test('checking to see if the pair functio nis working, full house', (expect) => 
         image: '../assets/cards/8C.png',
     }];
     const expected = 'full-house';
-    const actual = checkPair(minideck);
+    const actual = checkFullHouse(minideck);
 
     expect.equal(actual, expected);
 });
-test('checking to see if the pair functio nis working, 3 of a kind', (expect) => {
+test('checking to see if the pair function is working, 3 of a kind', (expect) => {
     const minideck = [{
         id: 1,
         suit: 'club',
@@ -481,7 +481,7 @@ test('checking to see if the pair functio nis working, 2 pair', (expect) => {
         image: '../assets/cards/8C.png',
     }];
     const expected = 'two-pair';
-    const actual = checkPair(minideck);
+    const actual = check2Pair(minideck);
 
     expect.equal(actual, expected);
 });

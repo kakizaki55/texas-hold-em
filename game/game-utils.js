@@ -89,4 +89,8 @@ export function checkPair(array){
         }
     }}
 
+export function check2Pair(){}
+
+export function checkFullHouse(){}
+
 
