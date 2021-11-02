@@ -1,4 +1,4 @@
-export const deck = [{
+export default [{
     id: 1,
     suit: 'club',
     number: '2',
