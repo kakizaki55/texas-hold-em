@@ -51,6 +51,9 @@ export function checkPair(array){
         switch (count) {
             case 4 :
                 return 'four-of-a-kind';
-                break;
+            case 3 :
+                return 'three-of-a-kind';
+            case 2 :
+                return 'pair';
         }
     }}

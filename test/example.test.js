@@ -482,7 +482,7 @@ test('checking to see if the pair functio nis working, 2 pair', (expect) => {
 
     expect.equal(actual, expected);
 });
-test('checking to see if the pair functio nis working, 4 of a kind', (expect) => {
+test('checking to see if the pair functio nis working, pair', (expect) => {
     const minideck = [{
         id: 1,
         suit: 'club',
