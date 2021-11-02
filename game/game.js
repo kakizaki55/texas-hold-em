@@ -11,6 +11,32 @@ import { findById, pullLocal, pushLocal } from '../utils.js';
 // const playerHand = createHand();
 
 const fakeHand = [{
+    id: 1,
+    suit: 'club',
+    number: '2',
+    image: '../assets/cards/2C.png',
+    
+}, {
+    id: 2,
+    suit: 'club',
+    number: '3',
+    image: '../assets/cards/3C.png',
+}, {
+    id: 3,
+    suit: 'club',
+    number: '4',
+    image: '../assets/cards/4C.png',
+}, {
+    id: 4,
+    suit: 'club',
+    number: '5',
+    image: '../assets/cards/5C.png',
+}, {
+    id: 5,
+    suit: 'club',
+    number: '6',
+    image: '../assets/cards/6C.png',
+}, {
     id: 6,
     suit: 'heart',
     number: '7',
@@ -21,7 +47,9 @@ const fakeHand = [{
     number: '8',
     image: '../assets/cards/8C.png',
 }];
+
 playerHand(fakeHand);
+
 // where player hand goes
 export function playerHand(deck){
     for (let item of deck){
@@ -42,21 +70,43 @@ export function playerHand(deck){
     }
 
 }
+dealerHand(fakeHand);
+export function dealerHand(deck){
+    for (let item of deck){
+        const dealerTable = document.getElementById('dealer-hand');
+        const div = document.createElement('div');
+    
+        const img = document.createElement('img');
+        img.src = `${item.image}`;
+    
+        const suit = document.createElement('p');
+        suit.textContent = item.suit;
+    
+        const number = document.createElement('p');
+        number.textContent = item.number;
+    
+        div.append(img, suit, number);
+        dealerTable.append(div);
+    }
 
-// for (let item of playerHand){
-//     const card = findById(deck, item.id);
-//     console.log(card);
-//     const div = document.createElement('div');
+}
+tableFlop(fakeHand);
+export function tableFlop(deck){
+    for (let item of deck){
+        const table = document.getElementById('table-hand');
+        const div = document.createElement('div');
+    
+        const img = document.createElement('img');
+        img.src = `${item.image}`;
+    
+        const suit = document.createElement('p');
+        suit.textContent = item.suit;
+    
+        const number = document.createElement('p');
+        number.textContent = item.number;
+    
+        div.append(img, suit, number);
+        table.append(div);
+    }
 
-//     const img = document.createElement('img');
-//     img.src = `${deck.image}`;
-
-//     const suit = document.createElement('p');
-//     suit.textContent = deck.suit;
-
-//     const number = document.createElement('p');
-//     number.textContent = deck.number;
-
-//     div.append(img, suit, number);
-//     playerTable.append(div);
-// }
+}
