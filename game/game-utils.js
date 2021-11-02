@@ -1,4 +1,4 @@
-import { findById } from '../utils.js';
+
 
 export function createHand(array){
     const hand = (array.splice(0, 2));
@@ -34,3 +34,9 @@ export function checkFlush(array){
         }
     }
 }
+
+export function checkPair(){
+
+
+
+} 

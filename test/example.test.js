@@ -1,7 +1,7 @@
-import { createHand, createFlop, createTurn, checkFlush } from '../game/game-utils.js';
+import { createHand, createFlop, createTurn, checkFlush, checkPair } from '../game/game-utils.js';
 
 const test = QUnit.test;
-const skip = QUnit.skip;
+// const skip = QUnit.skip;
 test('generate a hand, two cards outof the array and removce them from array', (expect) => {
     const minideck = [{
         id: 1,
@@ -301,11 +301,227 @@ test('checking to see if it returns an empty string', (expect) => {
         suit: 'spade',
         number: '8',
         image: '../assets/cards/8C.png',
-    }, {
-    }];
+    }
+    ];
 
     const expected = undefined;
     const actual = checkFlush(minideck);
     expect.equal(actual, expected);
 
+});
+
+test('checking to see if the pair functio nis working, 4 of a kind', (expect) => {
+    const minideck = [{
+        id: 1,
+        suit: 'club',
+        number: '4',
+        image: '../assets/cards/2C.png',
+    
+    }, {
+        id: 2,
+        suit: 'club',
+        number: '6',
+        image: '../assets/cards/3C.png',
+    }, {
+        id: 3,
+        suit: 'club',
+        number: '6',
+        image: '../assets/cards/4C.png',
+    }, {
+        id: 4,
+        suit: 'club',
+        number: '6',
+        image: '../assets/cards/5C.png',
+    }, {
+        id: 5,
+        suit: 'heart',
+        number: '6',
+        image: '../assets/cards/6C.png',
+    }, {
+        id: 6,
+        suit: 'heart',
+        number: '7',
+        image: '../assets/cards/7C.png',
+    }, {
+        id: 7,
+        suit: 'spade',
+        number: '8',
+        image: '../assets/cards/8C.png',
+    }];
+    const expected = 'four-of-kind';
+    const actual = checkPair(minideck);
+
+    expect.equal(actual, expected);
+});
+test('checking to see if the pair functio nis working, full house', (expect) => {
+    const minideck = [{
+        id: 1,
+        suit: 'club',
+        number: '4',
+        image: '../assets/cards/2C.png',
+    
+    }, {
+        id: 2,
+        suit: 'club',
+        number: '6',
+        image: '../assets/cards/3C.png',
+    }, {
+        id: 3,
+        suit: 'club',
+        number: '6',
+        image: '../assets/cards/4C.png',
+    }, {
+        id: 4,
+        suit: 'club',
+        number: '6',
+        image: '../assets/cards/5C.png',
+    }, {
+        id: 5,
+        suit: 'heart',
+        number: '5',
+        image: '../assets/cards/6C.png',
+    }, {
+        id: 6,
+        suit: 'heart',
+        number: '7',
+        image: '../assets/cards/7C.png',
+    }, {
+        id: 7,
+        suit: 'spade',
+        number: '4',
+        image: '../assets/cards/8C.png',
+    }];
+    const expected = 'full-house';
+    const actual = checkPair(minideck);
+
+    expect.equal(actual, expected);
+});
+test('checking to see if the pair functio nis working, 3 of a kind', (expect) => {
+    const minideck = [{
+        id: 1,
+        suit: 'club',
+        number: '4',
+        image: '../assets/cards/2C.png',
+    
+    }, {
+        id: 2,
+        suit: 'club',
+        number: '11',
+        image: '../assets/cards/3C.png',
+    }, {
+        id: 3,
+        suit: 'club',
+        number: '6',
+        image: '../assets/cards/4C.png',
+    }, {
+        id: 4,
+        suit: 'club',
+        number: '6',
+        image: '../assets/cards/5C.png',
+    }, {
+        id: 5,
+        suit: 'heart',
+        number: '6',
+        image: '../assets/cards/6C.png',
+    }, {
+        id: 6,
+        suit: 'heart',
+        number: '7',
+        image: '../assets/cards/7C.png',
+    }, {
+        id: 7,
+        suit: 'spade',
+        number: '10',
+        image: '../assets/cards/8C.png',
+    }];
+    const expected = 'three-of-a-kind';
+    const actual = checkPair(minideck);
+
+    expect.equal(actual, expected);
+});
+test('checking to see if the pair functio nis working, 2 pair', (expect) => {
+    const minideck = [{
+        id: 1,
+        suit: 'club',
+        number: '4',
+        image: '../assets/cards/2C.png',
+    
+    }, {
+        id: 2,
+        suit: 'club',
+        number: '3',
+        image: '../assets/cards/3C.png',
+    }, {
+        id: 3,
+        suit: 'club',
+        number: '4',
+        image: '../assets/cards/4C.png',
+    }, {
+        id: 4,
+        suit: 'club',
+        number: '6',
+        image: '../assets/cards/5C.png',
+    }, {
+        id: 5,
+        suit: 'heart',
+        number: '6',
+        image: '../assets/cards/6C.png',
+    }, {
+        id: 6,
+        suit: 'heart',
+        number: '7',
+        image: '../assets/cards/7C.png',
+    }, {
+        id: 7,
+        suit: 'spade',
+        number: '8',
+        image: '../assets/cards/8C.png',
+    }];
+    const expected = 'two-pair';
+    const actual = checkPair(minideck);
+
+    expect.equal(actual, expected);
+});
+test('checking to see if the pair functio nis working, 4 of a kind', (expect) => {
+    const minideck = [{
+        id: 1,
+        suit: 'club',
+        number: '4',
+        image: '../assets/cards/2C.png',
+    
+    }, {
+        id: 2,
+        suit: 'club',
+        number: '13',
+        image: '../assets/cards/3C.png',
+    }, {
+        id: 3,
+        suit: 'club',
+        number: '9',
+        image: '../assets/cards/4C.png',
+    }, {
+        id: 4,
+        suit: 'club',
+        number: '3',
+        image: '../assets/cards/5C.png',
+    }, {
+        id: 5,
+        suit: 'heart',
+        number: '6',
+        image: '../assets/cards/6C.png',
+    }, {
+        id: 6,
+        suit: 'heart',
+        number: '8',
+        image: '../assets/cards/7C.png',
+    }, {
+        id: 7,
+        suit: 'spade',
+        number: '8',
+        image: '../assets/cards/8C.png',
+    }];
+    const expected = 'pair';
+    const actual = checkPair(minideck);
+
+    expect.equal(actual, expected);
 });
