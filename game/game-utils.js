@@ -35,8 +35,22 @@ export function checkFlush(array){
     }
 }
 
-export function checkPair(){
+export function checkPair(array){
+    let numberArray = [];
+    for (let arr of array){
+        numberArray.push(arr.number);
+    }
+    let numberCount = {};
+    numberArray.forEach((num)=> {
+        numberCount[num] = (numberCount[num] || 0) + 1;
+    });
+    console.log(numberCount);
 
-
-
-} 
+    for (const [number, count] of Object.entries(numberCount)){
+        console.log(number, count);
+        switch (count) {
+            case 4 :
+                return 'four-of-a-kind';
+                break;
+        }
+    }}

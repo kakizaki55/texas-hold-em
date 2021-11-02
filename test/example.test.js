@@ -348,7 +348,7 @@ test('checking to see if the pair functio nis working, 4 of a kind', (expect) =>
         number: '8',
         image: '../assets/cards/8C.png',
     }];
-    const expected = 'four-of-kind';
+    const expected = 'four-of-a-kind';
     const actual = checkPair(minideck);
 
     expect.equal(actual, expected);
