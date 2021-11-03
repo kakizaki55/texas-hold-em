@@ -72,5 +72,8 @@ img {
     display: flex;
     justify-content: flex-start;
      width: 452px;
+}
 
+#face-down > img {
+    margin: 6px;
 }
