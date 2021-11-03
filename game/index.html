@@ -20,12 +20,17 @@
     </header>
     <span id="soul-count">50 souls</span>
     <body>
-        <section id="dealer-section">
+        <section class="hidden" id="dealer-section">
             <div class="render-cards" id="dealer-hand">
             </div>
         </section>
+        <section class="render-cards" id="face-down">
+            <img src="../assets/cards/red-card.png">
+            <img src="../assets/cards/red-card.png">
+            
+        </section>
 
-        <section id="table-section">
+        <section class="hidden" id="table-section">
             <div class="render-cards" id="table-hand">
             </div>
             <div class="render-cards" id="table-turn">
@@ -38,11 +43,13 @@
             <div class="render-cards" id="player-hand">
             </div>
         </section>
+        <button id="deal-button">Deal Hand</button>
+        <button id="play-again-button">Play Again!</button>
 
     </body>
         
     <footer>
-        <a href="./about/index.html">About Us Page</a>
+        <a href="../about/index.html">About Us Page</a>
     </footer>
 
     <script type="module" src="./game.js"></script>

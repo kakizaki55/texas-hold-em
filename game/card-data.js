@@ -123,7 +123,7 @@ const deck = [{
     id: 25,
     suit: 'diamond',
     number: '13',
-    image: '../assets/cards/KD.png',
+    image: '../assets/minokaCard.png',
 }, {
     id: 26,
     suit: 'diamond',
@@ -153,7 +153,7 @@ const deck = [{
     id: 31,
     suit: 'heart',
     number: '6',
-    image: '../assets/cards/6H.png',
+    image: '../assets/cards/6h.png',
 }, {
     id: 32,
     suit: 'heart',
@@ -183,7 +183,7 @@ const deck = [{
     id: 37,
     suit: 'heart',
     number: '12',
-    image: '../assets/cards/QH.png',
+    image: '../assets/libbiCard.png',
 }, {
     id: 38,
     suit: 'heart',
@@ -243,7 +243,7 @@ const deck = [{
     id: 49,
     suit: 'spade',
     number: '11',
-    image: '../assets/cards/JS.png',
+    image: '../assets/noahCard.png',
 }, {
     id: 50,
     suit: 'spade',
@@ -258,7 +258,7 @@ const deck = [{
     id: 52,
     suit: 'spade',
     number: '14',
-    image: '../assets/cards/AS.png',
+    image: '../assets/brettCard.png',
 }
 ];
 

@@ -148,3 +148,22 @@ function shuffle(array) {
     }
     return array;
 }
+
+const dealButton = document.getElementById('deal-button');
+const tableSection = document.getElementById('table-section');
+const refreshButton = document.getElementById('play-again-button');
+const dealerSection = document.getElementById('dealer-section');
+const faceDown = document.getElementById('face-down');
+
+dealButton.addEventListener('click', (e)=>{
+    tableSection.classList.remove('hidden');
+    tableSection.classList.add('unHidden');
+    dealerSection.classList.remove('hidden');
+    faceDown.classList.add('hidden');
+
+
+});
+
+refreshButton.addEventListener('click', (e)=>{
+    location.reload();
+});

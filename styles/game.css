@@ -46,12 +46,12 @@ div {
 }
 
 #table-section {
-    display: flex;
-    justify-content: flex-start;
+    /* display: flex;
+    justify-content: flex-start; */
     /* transform: scale3d(1.2, 1.2, 1.2); */
     /* margin: 20px; */
-    width: 452px;
-}
+    /* width: 452px; */
+ }
 
 .tableCss {
     width: 80px;
@@ -59,4 +59,21 @@ div {
 
 img {
     width: 60px;
+}
+
+.hidden {
+    display: flex;
+    justify-content: flex-start;
+    width: 452px;
+    display: none;
+}
+
+.unHidden {
+    display: flex;
+    justify-content: flex-start;
+     width: 452px;
+}
+
+#face-down > img {
+    margin: 6px;
 }
