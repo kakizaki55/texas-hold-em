@@ -168,3 +168,4 @@ export function checkHand(hand){
         return rank;
     }
 }
+

@@ -43,12 +43,16 @@ const tableSection = document.getElementById('table-section');
 const refreshButton = document.getElementById('play-again-button');
 const dealerSection = document.getElementById('dealer-section');
 const faceDown = document.getElementById('face-down');
+const resultsSpan = document.getElementById('results');
 
 dealButton.addEventListener('click', (e)=>{
     tableSection.classList.remove('hidden');
     tableSection.classList.add('unHidden');
     dealerSection.classList.remove('hidden');
     faceDown.classList.add('hidden');
+    const results = checkWhoWon(playerHandRanking, dealerHandRanking);
+    resultsSpan.textContent = results;
+    console.log(results);
 
     
 });
@@ -56,3 +60,13 @@ dealButton.addEventListener('click', (e)=>{
 refreshButton.addEventListener('click', (e)=>{
     location.reload();
 });
+
+function checkWhoWon(playerHandRanking, dealerHandRanking){
+    if (playerHandRanking > dealerHandRanking){
+        return 'You win!';
+    } else if (playerHandRanking === dealerHandRanking){
+        return 'Tie!';
+    } else {
+        return 'You lose!';
+    }
+}
