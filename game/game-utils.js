@@ -118,15 +118,32 @@ export function checkStright(array){
     }
 
     const sortedArray = numberArray.sort((a, b) => a - b);
-    
     let dupArray = [... new Set(sortedArray)];
-    console.log(dupArray);
-    let i = 0;
-    dupArray.forEach(num => {
+    // dupArray.filter((num, i) =>{
+    //     if (num + 1 === dupArray[i + 1]){
+    //         return true;
+    //     }
+    //     if (num - 1 === dupArray[i - 1] && num + 1 !== dupArray [ i + 1 ]){
+    //         return true;
+    //     }
+    // });
+    // console.log(dupArray);
+    const count = dupArray.reduce((acc, num, i) =>{
         if (num + 1 === dupArray[i + 1]){
-            i++;
-            console.log(num);
+            acc ++;
         }
-    });
-    console.log(i);
+        if (num - 1 === dupArray[i - 1] && num + 1 !== dupArray [ i + 1 ]){
+            acc ++;
+        }
+        console.log(num);
+        return acc;
+    }, 0);
+    console.log(count, 'total cout');
+    if (count >= 5){
+        return 'stright';
+    }
+    
+}
+export function check2Pair(array){
+
 }
