@@ -528,7 +528,7 @@ test('checking to see if the pair functio nis working, pair', (expect) => {
 
     expect.equal(actual, expected);
 });
-test('checking to see if check stright function is working', (expect) => {
+test('checking to see if check straight function is working', (expect) => {
     const minideck = [{
         id: 1,
         suit: 'club',
@@ -566,12 +566,12 @@ test('checking to see if check stright function is working', (expect) => {
         number: '7',
         image: '../assets/cards/8C.png',
     }];
-    const expected = 'stright';
+    const expected = 'straight';
     const actual = checkStright(minideck);
 
     expect.equal(actual, expected);
 });
-skip('checking to see if check stright function is working', (expect) => {
+skip('checking to see if check straight function is working', (expect) => {
     const minideck = [{
         id: 1,
         suit: 'club',
@@ -609,12 +609,12 @@ skip('checking to see if check stright function is working', (expect) => {
         number: '7',
         image: '../assets/cards/8C.png',
     }];
-    const expected = 'stright';
+    const expected = 'straight';
     const actual = checkStright(minideck);
 
     expect.equal(actual, expected);
 });
-test('checking to see if check stright function is working (mini stright)', (expect) => {
+test('checking to see if check straight function is working (mini straight)', (expect) => {
     const minideck = [{
         id: 1,
         suit: 'club',
@@ -652,7 +652,7 @@ test('checking to see if check stright function is working (mini stright)', (exp
         number: '6',
         image: '../assets/cards/8C.png',
     }];
-    const expected = 'stright';
+    const expected = undefined;
     const actual = checkStright(minideck);
 
     expect.equal(actual, expected);

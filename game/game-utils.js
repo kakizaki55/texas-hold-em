@@ -86,64 +86,54 @@ export function checkPair(array){
         }
     }}
 
-//  export function check2Pair(array){
-//     let numberArray = [];
-//     for (let arr of array){
-//         numberArray.push(arr.number);
-//     }
-//     let numberCount = {};
-//     numberArray.forEach((num)=> {
-//         numberCount[num] = (numberCount[num] || 0) + 1;
-//     });
-//     console.log(numberCount.value);
-//     for (const [number, count] of Object.entries(numberCount)){
-//         switch (count) {
-//             case 2 :
-//                 delete thisIsObject[number];
-//         }
-//     }}
-    
-
-// export function checkFullHouse(){}
-
 export function checkStright(array){
     let stringArray = [];
     for (let arr of array){
         stringArray.push(arr.number);
     }
-
     let numberArray = [];
     for (let number of stringArray){
         numberArray.push(parseInt(number));
     }
-
     const sortedArray = numberArray.sort((a, b) => a - b);
     let dupArray = [... new Set(sortedArray)];
-    // dupArray.filter((num, i) =>{
-    //     if (num + 1 === dupArray[i + 1]){
-    //         return true;
-    //     }
-    //     if (num - 1 === dupArray[i - 1] && num + 1 !== dupArray [ i + 1 ]){
-    //         return true;
-    //     }
-    // });
-    // console.log(dupArray);
-    const count = dupArray.reduce((acc, num, i) =>{
-        if (num + 1 === dupArray[i + 1]){
-            acc ++;
+
+    let count = 1;
+    for (let i = 0; i < dupArray.length; i++){
+        if (dupArray[i] + 1 === dupArray[i + 1]){
+            count ++;
+        } else {
+            count = 0;
         }
-        if (num - 1 === dupArray[i - 1] && num + 1 !== dupArray [ i + 1 ]){
-            acc ++;
+        if (count === 5){
+            return 'straight';
         }
-        console.log(num);
-        return acc;
-    }, 0);
-    console.log(count, 'total cout');
-    if (count >= 5){
-        return 'stright';
+    }
+}
+
+export function check2Pair(array){
+    let numberArray = [];
+    for (let arr of array){
+        numberArray.push(arr.number);
+    }
+    console.log(numberArray);
+    let numberCount = {};
+    numberArray.forEach((num)=> {
+        numberCount[num] = (numberCount[num] || 0) + 1;
+    });
+    let paircounter = 0;
+    console.log(numberCount);
+    const pairArray = Object.values(numberCount);
+    for (let pair of pairArray){
+        if (pair === 2){
+            paircounter ++;
+        }
+        if (paircounter === 2){
+            return 'two-pair';
+        }
     }
     
-}
-export function check2Pair(array){
 
+    
+    
 }
