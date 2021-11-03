@@ -103,7 +103,7 @@ export function checkStright(array){
         if (dupArray[i] + 1 === dupArray[i + 1]){
             count ++;
         } else {
-            count = 0;
+            count = 1;
         }
         if (count === 5){
             return 'straight';
