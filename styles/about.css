@@ -34,7 +34,7 @@ a {
 
 img {
     width: 150px;
-    border-radius: 150px;
+    border-radius: 25px;
     float: top;
     margin: auto;
     display: flex;
