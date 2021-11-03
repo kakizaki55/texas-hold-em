@@ -148,3 +148,12 @@ function shuffle(array) {
     }
     return array;
 }
+
+const dealButton = document.getElementById('deal-button');
+const tableSection = document.getElementById('table-section');
+
+dealButton.addEventListener('click', (e)=>{
+    tableSection.classList.remove('hidden');
+    tableSection.classList.add('unHidden');
+
+});
