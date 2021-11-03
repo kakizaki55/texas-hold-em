@@ -1,5 +1,3 @@
-
-
 export function createHand(array){
     const hand = (array.splice(0, 2));
     return hand;
@@ -86,7 +84,7 @@ export function checkPair(array){
         }
     }}
 
-export function checkStright(array){
+export function checkStraight(array){
     let stringArray = [];
     for (let arr of array){
         stringArray.push(arr.number);
@@ -116,13 +114,11 @@ export function check2Pair(array){
     for (let arr of array){
         numberArray.push(arr.number);
     }
-    console.log(numberArray);
     let numberCount = {};
     numberArray.forEach((num)=> {
         numberCount[num] = (numberCount[num] || 0) + 1;
     });
     let paircounter = 0;
-    console.log(numberCount);
     const pairArray = Object.values(numberCount);
     for (let pair of pairArray){
         if (pair === 2){
@@ -132,8 +128,43 @@ export function check2Pair(array){
             return 'two-pair';
         }
     }
-    
+}
 
-    
-    
+export function checkHand(hand){
+    let rank = 0;
+    if (check4Pair(hand)){
+        rank = 8;
+        console.log('You have 4 of a kind');
+        return rank;
+
+    } else if (checkFlush(hand)){
+        rank = 6;
+        console.log('You have a flush');
+        return rank;
+
+    } else if (checkStraight(hand)){
+        rank = 5;
+      console.log('You have a straight');
+        return rank;
+
+    } else if (check3Pair(hand)){
+        rank = 4;
+      console.log('You have 3 of a kind');
+        return rank;
+
+    } else if (check2Pair(hand)){
+        rank = 3;
+      console.log('You have a 2 pair');
+        return rank;
+
+    } else if (checkPair(hand)){
+        rank = 2;
+      console.log('You have a pair');
+        return rank;
+
+    } else {
+        rank = 0;
+        console.log('You didnt win');
+        return rank;
+    }
 }

@@ -1,7 +1,7 @@
 //render card function
 import { playerHand, dealerHand, tableFlop, tableTurn, tableRiver, shuffle } from './game-render.js';
 import deck from './card-data.js';
-import { createFlop, createHand, createTurn } from './game-utils.js';
+import { createFlop, createHand, createTurn, checkHand, checkFlush, check4Pair, check3Pair, check2Pair, checkPair, checkStraight } from './game-utils.js';
 // import { findById, pullLocal, pushLocal } from '../utils.js';
 
 shuffle(deck);
@@ -26,8 +26,17 @@ tableTurn(tHand);
 
 tableRiver(rHand);
 
+let playerHandRanking = 0;
+let dealerHandRanking = 0;
 
-function
+const fullPlayerHand = [].concat(pHand, tFlop, tHand, rHand);
+playerHandRanking = checkHand(fullPlayerHand, playerHandRanking);
+
+const fullDealerHand = [].concat(dHand, tFlop, tHand, rHand);
+dealerHandRanking = checkHand(fullDealerHand, dealerHandRanking);
+console.log(playerHandRanking);
+console.log(dealerHandRanking);
+
 
 const dealButton = document.getElementById('deal-button');
 const tableSection = document.getElementById('table-section');
