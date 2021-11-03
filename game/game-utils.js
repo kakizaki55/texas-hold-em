@@ -35,7 +35,7 @@ export function checkFlush(array){
     }
 }
 
-export function checkPair(array){
+export function check4Pair(array){
     let numberArray = [];
     for (let arr of array){
         numberArray.push(arr.number);
@@ -46,13 +46,78 @@ export function checkPair(array){
     });
     // siwtch is for checking the count number and seeing how many 
     for (const [number, count] of Object.entries(numberCount)){
-        console.log(number, count);
         switch (count) {
             case 4 :
-                return number, 'four-of-a-kind';
-            case 3 :
-                return number, 'three-of-a-kind';
-            case 2 :
-                return number, 'pair';
+                return 'four-of-a-kind';
         }
     }}
+
+export function check3Pair(array){
+    let numberArray = [];
+    for (let arr of array){
+        numberArray.push(arr.number);
+    }
+    let numberCount = {};
+    numberArray.forEach((num)=> {
+        numberCount[num] = (numberCount[num] || 0) + 1;
+    });
+        // siwtch is for checking the count number and seeing how many 
+    for (const [number, count] of Object.entries(numberCount)){
+        switch (count) {
+            case 3 :
+                return 'three-of-a-kind';
+        }
+    }}
+
+export function checkPair(array){
+    let numberArray = [];
+    for (let arr of array){
+        numberArray.push(arr.number);
+    }
+    let numberCount = {};
+    numberArray.forEach((num)=> {
+        numberCount[num] = (numberCount[num] || 0) + 1;
+    });
+        // siwtch is for checking the count number and seeing how many 
+    for (const [number, count] of Object.entries(numberCount)){
+        switch (count) {
+            case 2 :
+                return 'pair';
+        }
+    }}
+
+//  export function check2Pair(array){
+//     let numberArray = [];
+//     for (let arr of array){
+//         numberArray.push(arr.number);
+//     }
+//     let numberCount = {};
+//     numberArray.forEach((num)=> {
+//         numberCount[num] = (numberCount[num] || 0) + 1;
+//     });
+//     console.log(numberCount.value);
+//     for (const [number, count] of Object.entries(numberCount)){
+//         switch (count) {
+//             case 2 :
+//                 delete thisIsObject[number];
+//         }
+//     }}
+    
+
+// export function checkFullHouse(){}
+
+export function checkStright(array){
+    let stringArray = [];
+    for (let arr of array){
+        stringArray.push(arr.number);
+    }
+    let numberArray = [];
+
+    for (let number of stringArray){
+        numberArray.push(parseInt(number));
+    }
+    const sortedArray = numberArray.sort((a, b) => a - b);
+    console.log(sortedArray);
+    let dupArray = [... new Set(sortedArray)];
+    console.log(dupArray);
+}
