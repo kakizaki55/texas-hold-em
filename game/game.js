@@ -30,10 +30,10 @@ let playerHandRanking = 0;
 let dealerHandRanking = 0;
 
 const fullPlayerHand = [].concat(pHand, tFlop, tHand, rHand);
-playerHandRanking = checkHand(fullPlayerHand, playerHandRanking);
+playerHandRanking = checkHand(fullPlayerHand);
 
 const fullDealerHand = [].concat(dHand, tFlop, tHand, rHand);
-dealerHandRanking = checkHand(fullDealerHand, dealerHandRanking);
+dealerHandRanking = checkHand(fullDealerHand);
 console.log(playerHandRanking);
 console.log(dealerHandRanking);
 
