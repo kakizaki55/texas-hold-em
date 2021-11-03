@@ -111,13 +111,39 @@ export function checkStright(array){
     for (let arr of array){
         stringArray.push(arr.number);
     }
-    let numberArray = [];
 
+    let numberArray = [];
     for (let number of stringArray){
         numberArray.push(parseInt(number));
     }
+
     const sortedArray = numberArray.sort((a, b) => a - b);
-    console.log(sortedArray);
     let dupArray = [... new Set(sortedArray)];
-    console.log(dupArray);
+    // dupArray.filter((num, i) =>{
+    //     if (num + 1 === dupArray[i + 1]){
+    //         return true;
+    //     }
+    //     if (num - 1 === dupArray[i - 1] && num + 1 !== dupArray [ i + 1 ]){
+    //         return true;
+    //     }
+    // });
+    // console.log(dupArray);
+    const count = dupArray.reduce((acc, num, i) =>{
+        if (num + 1 === dupArray[i + 1]){
+            acc ++;
+        }
+        if (num - 1 === dupArray[i - 1] && num + 1 !== dupArray [ i + 1 ]){
+            acc ++;
+        }
+        console.log(num);
+        return acc;
+    }, 0);
+    console.log(count, 'total cout');
+    if (count >= 5){
+        return 'stright';
+    }
+    
+}
+export function check2Pair(array){
+
 }
