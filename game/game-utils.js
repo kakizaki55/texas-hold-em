@@ -111,13 +111,22 @@ export function checkStright(array){
     for (let arr of array){
         stringArray.push(arr.number);
     }
-    let numberArray = [];
 
+    let numberArray = [];
     for (let number of stringArray){
         numberArray.push(parseInt(number));
     }
+
     const sortedArray = numberArray.sort((a, b) => a - b);
-    console.log(sortedArray);
+    
     let dupArray = [... new Set(sortedArray)];
     console.log(dupArray);
+    let i = 0;
+    dupArray.forEach(num => {
+        if (num + 1 === dupArray[i + 1]){
+            i++;
+            console.log(num);
+        }
+    });
+    console.log(i);
 }

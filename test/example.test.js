@@ -528,7 +528,7 @@ test('checking to see if the pair functio nis working, pair', (expect) => {
 
     expect.equal(actual, expected);
 });
-test('checking to see if check stright function is working', (expect) => {
+skip('checking to see if check stright function is working', (expect) => {
     const minideck = [{
         id: 1,
         suit: 'club',
@@ -554,6 +554,49 @@ test('checking to see if check stright function is working', (expect) => {
         id: 5,
         suit: 'heart',
         number: '6',
+        image: '../assets/cards/6C.png',
+    }, {
+        id: 6,
+        suit: 'heart',
+        number: '8',
+        image: '../assets/cards/7C.png',
+    }, {
+        id: 7,
+        suit: 'spade',
+        number: '7',
+        image: '../assets/cards/8C.png',
+    }];
+    const expected = 'stright';
+    const actual = checkStright(minideck);
+
+    expect.equal(actual, expected);
+});
+test('checking to see if check stright function is working', (expect) => {
+    const minideck = [{
+        id: 1,
+        suit: 'club',
+        number: '4',
+        image: '../assets/cards/2C.png',
+    
+    }, {
+        id: 2,
+        suit: 'club',
+        number: '5',
+        image: '../assets/cards/3C.png',
+    }, {
+        id: 3,
+        suit: 'club',
+        number: '13',
+        image: '../assets/cards/4C.png',
+    }, {
+        id: 4,
+        suit: 'club',
+        number: '9',
+        image: '../assets/cards/5C.png',
+    }, {
+        id: 5,
+        suit: 'heart',
+        number: '10',
         image: '../assets/cards/6C.png',
     }, {
         id: 6,
