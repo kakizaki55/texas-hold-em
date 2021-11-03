@@ -2,7 +2,7 @@
 
 import deck from './card-data.js';
 import { createFlop, createHand, createTurn } from './game-utils.js';
-import { findById, pullLocal, pushLocal } from '../utils.js';
+// import { findById, pullLocal, pushLocal } from '../utils.js';
 
 // dealerHand is Flop + Turn + river
 // const dealerHand =
@@ -80,6 +80,7 @@ function tableFlop(deck){
         const div = document.createElement('div');
     
         const img = document.createElement('img');
+        img.classList.add('tableCss');
         img.src = `${item.image}`;
     
         const suit = document.createElement('p');
@@ -100,6 +101,7 @@ function tableTurn(deck){
         const div = document.createElement('div');
     
         const img = document.createElement('img');
+        img.classList.add('tableCss');
         img.src = `${item.image}`;
     
         const suit = document.createElement('p');
@@ -120,6 +122,7 @@ function tableRiver(deck){
         const div = document.createElement('div');
     
         const img = document.createElement('img');
+        img.classList.add('tableCss');
         img.src = `${item.image}`;
     
         const suit = document.createElement('p');
