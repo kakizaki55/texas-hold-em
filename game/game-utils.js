@@ -44,9 +44,10 @@ export function check4Pair(array){
     });
     // siwtch is for checking the count number and seeing how many 
     for (const [number, count] of Object.entries(numberCount)){
+        
         switch (count) {
             case 4 :
-                return 'four-of-a-kind';
+                return `four-of-a-kind ${number}`;
         }
     }}
 
@@ -63,7 +64,7 @@ export function check3Pair(array){
     for (const [number, count] of Object.entries(numberCount)){
         switch (count) {
             case 3 :
-                return 'three-of-a-kind';
+                return `three-of-a-kind ${number}`;
         }
     }}
 
@@ -80,7 +81,7 @@ export function checkPair(array){
     for (const [number, count] of Object.entries(numberCount)){
         switch (count) {
             case 2 :
-                return 'pair';
+                return `pair ${number}`;
         }
     }}
 
