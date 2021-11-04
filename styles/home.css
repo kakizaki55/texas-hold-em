@@ -50,3 +50,12 @@ button {
     margin: 20px;
 }
 
+.hidden {
+    transition: ease-in-out 3s;
+    opacity: .0001;
+}
+
+.unhidden {
+    transition: ease-in-out 3s;
+    opacity: 1;
+}

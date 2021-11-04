@@ -102,6 +102,10 @@ refreshButton.addEventListener('click', ()=>{
     location.reload();
 });
 
+if (player.souls >= 100 || player.souls <= 0){
+    window.location.replace('../results');
+}
+
 function checkWhoWon(playerHandRanking, dealerHandRanking){
     if (playerHandRanking > dealerHandRanking){
         return 'You win!';

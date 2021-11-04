@@ -30,7 +30,7 @@ footer{
 }
 header{
     background-color: #4D9078;
-    width: 100%;
+    width: 100vw;
     display: flex;
     justify-content: center;
 }
