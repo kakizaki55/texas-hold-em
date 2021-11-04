@@ -76,7 +76,7 @@
         margin: 5px;
     }
     
-    .hidden {
+    .hidden{
         display: flex;
         justify-content: flex-start;
         width: 452px;
@@ -137,8 +137,18 @@
     #table-section{
         height: 100px;
     }
-    #results-container{
+    #results{
         display: flex;
-        flex-direction: column;
-        justify-content: center;
+        margin: auto;
+        justify-content: space-around;
+        font-weight: bolder;
     }
+    .play-again-container{
+        display: flex;
+        margin: auto;
+        justify-content: space-around;
+    }
+    #player-stats{
+        font-weight: bolder;
+    }
+     
