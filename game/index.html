@@ -18,7 +18,10 @@
     <header>
         <a href="../index.html">Texas Hold-em!</a>
     </header>
-    <span id="soul-count">50 souls</span>
+    <div id="player-stats">
+        <span id="name"></span>
+        <span id="soul-count"></span>
+    </div>
     <body>
         <section class="hidden" id="dealer-section">
             <div class="render-cards" id="dealer-hand">
@@ -48,8 +51,10 @@
         </div>
         <button id="deal-button">Deal Hand</button>
         <button id="play-again-button">Play Again!</button>
-    
-
+        <form id="bet-form">
+            <input id="bet-input"type="number" name="bet-amount">
+            <button id="bet-button">Bet</button>
+        </form>
     </body>
         
     <footer>

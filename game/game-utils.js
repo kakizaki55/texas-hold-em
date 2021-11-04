@@ -44,9 +44,10 @@ export function check4Pair(array){
     });
     // siwtch is for checking the count number and seeing how many 
     for (const [number, count] of Object.entries(numberCount)){
+        
         switch (count) {
             case 4 :
-                return 'four-of-a-kind';
+                return `four-of-a-kind ${number}`;
         }
     }}
 
@@ -63,7 +64,7 @@ export function check3Pair(array){
     for (const [number, count] of Object.entries(numberCount)){
         switch (count) {
             case 3 :
-                return 'three-of-a-kind';
+                return `three-of-a-kind ${number}`;
         }
     }}
 
@@ -80,7 +81,7 @@ export function checkPair(array){
     for (const [number, count] of Object.entries(numberCount)){
         switch (count) {
             case 2 :
-                return 'pair';
+                return `pair ${number}`;
         }
     }}
 
@@ -101,7 +102,7 @@ export function checkStraight(array){
         if (dupArray[i] + 1 === dupArray[i + 1]){
             count ++;
         } else {
-            count = 0;
+            count = 1;
         }
         if (count === 5){
             return 'straight';
@@ -134,37 +135,37 @@ export function checkHand(hand){
     let rank = 0;
     if (check4Pair(hand)){
         rank = 8;
-        console.log('You have 4 of a kind');
+        // console.log('You have 4 of a kind');
         return rank;
 
     } else if (checkFlush(hand)){
         rank = 6;
-        console.log('You have a flush');
+        // console.log('You have a flush');
         return rank;
 
     } else if (checkStraight(hand)){
         rank = 5;
-      console.log('You have a straight');
+        // console.log('You have a straight');
         return rank;
 
     } else if (check3Pair(hand)){
         rank = 4;
-      console.log('You have 3 of a kind');
+        // console.log('You have 3 of a kind');
         return rank;
 
     } else if (check2Pair(hand)){
         rank = 3;
-      console.log('You have a 2 pair');
+        // console.log('You have a 2 pair');
         return rank;
 
     } else if (checkPair(hand)){
         rank = 2;
-      console.log('You have a pair');
+        // console.log('You have a pair');
         return rank;
 
     } else {
         rank = 0;
-        console.log('You didnt win');
+        // console.log('You didnt win');
         return rank;
     }
 }
