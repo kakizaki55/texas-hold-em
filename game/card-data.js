@@ -113,7 +113,7 @@ const deck = [{
     id: 23,
     suit: 'diamond',
     number: '11',
-    image: '../assets/cards/JD.png',
+    image: '../assets/brettCard.png',
 }, {
     id: 24,
     suit: 'diamond',
@@ -258,7 +258,7 @@ const deck = [{
     id: 52,
     suit: 'spade',
     number: '14',
-    image: '../assets/brettCard.png',
+    image: '../assets/danCard.png',
 }
 ];
 
