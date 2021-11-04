@@ -31,4 +31,5 @@ userForm.addEventListener('submit', (expect) =>{
     pushLocal(userObj);
     window.location.replace('./game');
 });
-
+const audio = document.getElementById('audio');
+audio.volume = .1;

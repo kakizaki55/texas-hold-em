@@ -4,7 +4,7 @@
     body{
         background-color: #5fad56;
         font-family: 'DotGothic16', sans-serif;
-        background-image: url(../assets/pokertable.png);
+        /* background-image: url(../assets/pokertable.png); */
         background-size: contain;
         background-position: center;
         background-repeat: no-repeat;
@@ -18,7 +18,8 @@
         background-color: #4D9078;
         justify-content: center;
         width: 100%;
-        height: 60px;
+        height: 3.8rem;
+        align-items: stretch;
     }
     
     p {
@@ -32,10 +33,9 @@
         position: absolute;
         bottom: 0;
         width: 100%;
-        height: 2.1rem;
+        height: 3.8rem;
         justify-content: center;
         background-color: #4D9078;
-        height: 50px;
         font-family: 'Press Start 2P', cursive;
     }
     
@@ -54,9 +54,7 @@
         display: flex;
         flex-direction: row;
         align-items: center;
-        
     }
-    
     .render-two {
         display: flex;
         flex-direction: row;
@@ -71,6 +69,7 @@
     img {
         width: 40px;
         padding: 5px;
+        position: relative;
     }
 
     div {
@@ -87,6 +86,7 @@
     .unHidden {
         display: flex;
         justify-content: center;
+        flex-direction: row;
     }
     
     #face-down > img {
@@ -101,4 +101,44 @@
         font-size: x-large;
         display: flex;
         align-items: center;
+    }
+    main{
+    background-image: url(../assets/pokertable.png);
+    background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 800px;
+        border: solid brown 5px;
+    
+    }
+    section{
+        width:400px;
+        position: relative;
+        
+    }
+    #bet-form{
+        height: 2rem;
+        display: flex;
+        flex-direction: column;
+        width: min-content;
+        
+    }
+    #bet-input{
+        margin-bottom: 10px;
+        width: 115x
+    }
+
+    #deal-button{
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        margin-bottom: 10px;
+    }
+    #table-section{
+        height: 100px;
+    }
+    #results-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }

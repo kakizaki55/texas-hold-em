@@ -10,7 +10,8 @@ const name = document.getElementById('name');
 const soulCount = document.getElementById('soul-count');
 const betForm = document.getElementById('bet-form');
 const betButton = document.getElementById('bet-button');
-
+const coinSound = new Audio('../assets/coin-sound.mp3');
+coinSound.volume = .1;
 name.textContent = `Name: ${player.name}`;
 soulCount.textContent = `souls: ${player.souls}`;
 
@@ -18,19 +19,22 @@ betForm.addEventListener('submit', (event) =>{
     event.preventDefault();
     const bet = new FormData(betForm);
     const betAmount = bet.get('bet-amount');
-    if (betAmount > player.souls){
+    if (!betAmount) {
+        alert('you must bet atleast 1 soul');
+    } else if (betAmount > player.souls){
         alert('you do not have that many souls to bet');
     } else {
+        coinSound.play();
         player.souls = player.souls - betAmount;
         player.bet = betAmount;
         pushLocal(player);
-    
+        
         player = pullLocal();
         name.textContent = `Name: ${player.name}`;
         soulCount.textContent = `souls: ${player.souls}`;
         pushLocal(player);
         betButton.classList.add('hidden');
-    }
+    } 
 });
 
 shuffle(deck);
@@ -62,6 +66,8 @@ const refreshButton = document.getElementById('play-again-button');
 const dealerSection = document.getElementById('dealer-section');
 const faceDown = document.getElementById('face-down');
 const resultsSpan = document.getElementById('results');
+
+
 
 dealButton.addEventListener('click', ()=> {
     const results = checkWhoWon(playerHandRanking, dealerHandRanking);
@@ -115,4 +121,6 @@ function checkWhoWon(playerHandRanking, dealerHandRanking){
         return 'You lose!';
     }
 }
+const audio = document.getElementById('audio');
+audio.volume = .1;
 
