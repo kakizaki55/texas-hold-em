@@ -2,77 +2,98 @@
 @import url('https://fonts.googleapis.com/css2?family=DotGothic16&family=Press+Start+2P&display=swap');
 
 
-body{
-    background-color: #5fad56;
-    font-family: 'DotGothic16', sans-serif;
+@media screen and (max-width: 600px) {
+    body{
+        background-color: #5fad56;
+        font-family: 'DotGothic16', sans-serif;
+        background-image: url(../assets/pokertable.png);
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: auto;
+    }
+    
+    header {
+        font-family: 'Press Start 2P', cursive;
+        display: flex;
+        font-size: x-small;
+        background-color: #4D9078;
+        justify-content: center;
+        width: 100%;
+        height: 60px;
+    }
+    
+    p {
+        margin: 2px;
+        font-weight: bold;
+        margin: auto;
+    }
+    
+    footer {
+        display: flex;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 2.1rem;
+        justify-content: center;
+        background-color: #4D9078;
+        height: 50px;
+        font-family: 'Press Start 2P', cursive;
+    }
+    
+    #player-stats {
+        margin: 5px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .render-cards {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .tableCss {
+        width: 70px;
+    }
+    
+    img {
+        width: 60px;
+    }
+    
+    .hidden {
+        display: flex;
+        justify-content: flex-start;
+        width: 452px;
+        display: none;
+    }
+    
+    .unHidden {
+        display: flex;
+        justify-content: flex-start;
+         width: 452px;
+    }
+    
+    #face-down > img {
+        margin: 6px;
+    }
+    
+    a {
+        font-size: x-large;
+        display: flex;
+        align-items: center;
+    }
+    
+    .poker-table {
+        transform: rotate(90deg);
+    }
+
+    #player-stats span {
+        width: 100px;
+    }
+    
+    button {
+        
+    }
 }
 
-header {
-    font-family: 'Press Start 2P', cursive;
-    display: flex;
-    font-size: x-small;
-    background-color: #4D9078;
-    justify-content: center;
-    width: 100%;
-    height: 60px;
-}
-
-p {
-    margin: 2px;
-    font-weight: bold;
-    margin: auto;
-}
-
-footer {
-    display: flex;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 2.1rem;
-    justify-content: center;
-    background-color: #4D9078;
-    height: 50px;
-    font-family: 'Press Start 2P', cursive;
-}
-
-div {
-    margin: 5px;
-    display: flex;
-    flex-direction: column;
-}
-
-.render-cards {
-    display: flex;
-    flex-direction: row;
-}
-
-.tableCss {
-    width: 80px;
-}
-
-img {
-    width: 60px;
-}
-
-.hidden {
-    display: flex;
-    justify-content: flex-start;
-    width: 452px;
-    display: none;
-}
-
-.unHidden {
-    display: flex;
-    justify-content: flex-start;
-     width: 452px;
-}
-
-#face-down > img {
-    margin: 6px;
-}
-
-a {
-    font-size: x-large;
-    display: flex;
-    align-items: center;
-}
