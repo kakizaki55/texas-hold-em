@@ -1,8 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=DotGothic16&family=Press+Start+2P&display=swap');
 
-
-@media screen and (max-width: 600px) {
     body{
         background-color: #5fad56;
         font-family: 'DotGothic16', sans-serif;
@@ -12,7 +10,7 @@
         background-repeat: no-repeat;
         height: auto;
     }
-    
+
     header {
         font-family: 'Press Start 2P', cursive;
         display: flex;
@@ -48,17 +46,35 @@
         align-items: center;
     }
     
+    #player-stats span {
+        width: 100px;
+    }
+
     .render-cards {
         display: flex;
         flex-direction: row;
+        align-items: center;
+        
+    }
+    
+    .render-two {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-left: 40px;
     }
     
     .tableCss {
-        width: 70px;
+        width: 50px;
     }
     
     img {
-        width: 60px;
+        width: 40px;
+        padding: 5px;
+    }
+
+    div {
+        margin: 5px;
     }
     
     .hidden {
@@ -70,30 +86,19 @@
     
     .unHidden {
         display: flex;
-        justify-content: flex-start;
-         width: 452px;
+        justify-content: center;
     }
     
     #face-down > img {
         margin: 6px;
     }
     
+    #face-down {
+        margin-left: 40px;
+    }
+
     a {
         font-size: x-large;
         display: flex;
         align-items: center;
     }
-    
-    .poker-table {
-        transform: rotate(90deg);
-    }
-
-    #player-stats span {
-        width: 100px;
-    }
-    
-    button {
-        
-    }
-}
-
