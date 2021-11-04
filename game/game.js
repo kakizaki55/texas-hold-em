@@ -5,7 +5,6 @@ import { createFlop, createHand, createTurn, checkHand } from './game-utils.js';
 import { pullLocal, pushLocal } from '../utils.js';
 
 let player = pullLocal();
-console.log(player);
 
 const name = document.getElementById('name');
 const soulCount = document.getElementById('soul-count');
@@ -20,18 +19,13 @@ betForm.addEventListener('submit', (event) =>{
     const betAmount = bet.get('bet-amount');
     player.souls = player.souls - betAmount;
     player.bet = betAmount;
-    // console.log(player);
     pushLocal(player);
 
     player = pullLocal();
     name.textContent = `Name: ${player.name}`;
     soulCount.textContent = `souls: ${player.souls}`;
     pushLocal(player);
-    // souls = betAmount;
-    // return souls;
 });
-
-
 
 shuffle(deck);
 
@@ -55,9 +49,6 @@ playerHandRanking = checkHand(fullPlayerHand);
 
 const fullDealerHand = [].concat(dHand, tFlop, tHand, rHand);
 dealerHandRanking = checkHand(fullDealerHand);
-console.log(playerHandRanking);
-console.log(dealerHandRanking);
-
 
 const dealButton = document.getElementById('deal-button');
 const tableSection = document.getElementById('table-section');
