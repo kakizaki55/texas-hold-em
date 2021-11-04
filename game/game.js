@@ -9,6 +9,7 @@ let player = pullLocal();
 const name = document.getElementById('name');
 const soulCount = document.getElementById('soul-count');
 const betForm = document.getElementById('bet-form');
+const betButton = document.getElementById('bet-button');
 
 name.textContent = `Name: ${player.name}`;
 soulCount.textContent = `souls: ${player.souls}`;
@@ -17,14 +18,19 @@ betForm.addEventListener('submit', (event) =>{
     event.preventDefault();
     const bet = new FormData(betForm);
     const betAmount = bet.get('bet-amount');
-    player.souls = player.souls - betAmount;
-    player.bet = betAmount;
-    pushLocal(player);
-
-    player = pullLocal();
-    name.textContent = `Name: ${player.name}`;
-    soulCount.textContent = `souls: ${player.souls}`;
-    pushLocal(player);
+    if (betAmount > player.souls){
+        alert('you do not have that many souls to bet');
+    } else {
+        player.souls = player.souls - betAmount;
+        player.bet = betAmount;
+        pushLocal(player);
+    
+        player = pullLocal();
+        name.textContent = `Name: ${player.name}`;
+        soulCount.textContent = `souls: ${player.souls}`;
+        pushLocal(player);
+        betButton.classList.add('hidden');
+    }
 });
 
 shuffle(deck);
@@ -58,34 +64,37 @@ const faceDown = document.getElementById('face-down');
 const resultsSpan = document.getElementById('results');
 
 dealButton.addEventListener('click', ()=> {
-    tableSection.classList.remove('hidden');
-    tableSection.classList.add('unHidden');
-    dealerSection.classList.remove('hidden');
-    faceDown.classList.add('hidden');
     const results = checkWhoWon(playerHandRanking, dealerHandRanking);
-
-    resultsSpan.textContent = results;
-
-    if (resultsSpan.textContent === 'You win!'){
-        player.souls += (player.bet * 2);
-        player.bet = 0;
-        pushLocal(player);
-        player = pullLocal();
-        name.textContent = `Name: ${player.name}`;
-        soulCount.textContent = `souls: ${player.souls}`;
-
-    } else if (resultsSpan.textContent === 'Tie!'){
-        player.souls += player.bet;
-        player.bet = 0;
-        pushLocal(player);
-        player = pullLocal();
-        name.textContent = `Name: ${player.name}`;
-        soulCount.textContent = `souls: ${player.souls}`;
-
+    if (player.bet < 1) {
+        alert('you must bet atleast 1 soul');
     } else {
-        player = pullLocal();
-        name.textContent = `Name: ${player.name}`;
-        soulCount.textContent = `souls: ${player.souls}`;
+        resultsSpan.textContent = results;
+        tableSection.classList.remove('hidden');
+        tableSection.classList.add('unHidden');
+        dealerSection.classList.remove('hidden');
+        faceDown.classList.add('hidden');
+        refreshButton.classList.remove('hidden');
+        if (resultsSpan.textContent === 'You win!'){
+            player.souls = Number(player.souls) + Number(player.bet * 2);
+            player.bet = 0;
+            pushLocal(player);
+            player = pullLocal();
+            name.textContent = `Name: ${player.name}`;
+            soulCount.textContent = `souls: ${player.souls}`;
+    
+        } else if (resultsSpan.textContent === 'Tie!'){
+            player.souls = Number(player.souls) + Number(player.bet);
+            player.bet = 0;
+            pushLocal(player);
+            player = pullLocal();
+            name.textContent = `Name: ${player.name}`;
+            soulCount.textContent = `souls: ${player.souls}`;
+    
+        } else {
+            player = pullLocal();
+            name.textContent = `Name: ${player.name}`;
+            soulCount.textContent = `souls: ${player.souls}`;
+        }
     }
 });
 
