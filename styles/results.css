@@ -1,0 +1,19 @@
+body {
+    width: 80vw;
+    margin: auto;
+}
+
+
+p {
+    width: 80vw;
+}
+
+.hidden {
+    transition: ease-in-out 3s;
+    opacity: .0001;
+}
+
+.unhidden {
+    transition: ease-in-out 3s;
+    opacity: 1;
+}
