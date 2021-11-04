@@ -4,35 +4,47 @@ import deck from './card-data.js';
 import { createFlop, createHand, createTurn, checkHand } from './game-utils.js';
 import { pullLocal, pushLocal } from '../utils.js';
 
-const player = pullLocal();
+let player = pullLocal();
 console.log(player);
 
 const name = document.getElementById('name');
 const soulCount = document.getElementById('soul-count');
+const betForm = document.getElementById('bet-form');
 
 name.textContent = `Name: ${player.name}`;
 soulCount.textContent = `souls: ${player.souls}`;
 
+betForm.addEventListener('submit', (event) =>{
+    event.preventDefault();
+    const bet = new FormData(betForm);
+    const betAmount = bet.get('bet-amount');
+    player.souls = player.souls - betAmount;
+    player.bet = betAmount;
+    // console.log(player);
+    pushLocal(player);
+
+    player = pullLocal();
+    name.textContent = `Name: ${player.name}`;
+    soulCount.textContent = `souls: ${player.souls}`;
+    pushLocal(player);
+    // souls = betAmount;
+    // return souls;
+});
+
+
+
 shuffle(deck);
 
 const pHand = createHand(deck);
-
 const dHand = createHand(deck);
-
 const tFlop = createFlop(deck);
-
 const tHand = createTurn(deck);
-
 const rHand = createTurn(deck);
 
 playerHand(pHand);
-
 dealerHand(dHand);
-
 tableFlop(tFlop);
-
 tableTurn(tHand);
-
 tableRiver(rHand);
 
 let playerHandRanking = 0;
@@ -60,10 +72,30 @@ dealButton.addEventListener('click', ()=> {
     dealerSection.classList.remove('hidden');
     faceDown.classList.add('hidden');
     const results = checkWhoWon(playerHandRanking, dealerHandRanking);
-    resultsSpan.textContent = results;
-    console.log(results);
 
-    
+    resultsSpan.textContent = results;
+
+    if (resultsSpan.textContent === 'You win!'){
+        player.souls += (player.bet * 2);
+        player.bet = 0;
+        pushLocal(player);
+        player = pullLocal();
+        name.textContent = `Name: ${player.name}`;
+        soulCount.textContent = `souls: ${player.souls}`;
+
+    } else if (resultsSpan.textContent === 'Tie!'){
+        player.souls += player.bet;
+        player.bet = 0;
+        pushLocal(player);
+        player = pullLocal();
+        name.textContent = `Name: ${player.name}`;
+        soulCount.textContent = `souls: ${player.souls}`;
+
+    } else {
+        player = pullLocal();
+        name.textContent = `Name: ${player.name}`;
+        soulCount.textContent = `souls: ${player.souls}`;
+    }
 });
 
 refreshButton.addEventListener('click', ()=>{
