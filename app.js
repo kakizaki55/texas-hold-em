@@ -33,3 +33,10 @@ userForm.addEventListener('submit', (expect) =>{
 });
 const audio = document.getElementById('audio');
 audio.volume = .1;
+
+const mute = document.getElementById('mute');
+
+mute.addEventListener('click', (e) =>{
+    e.preventDefault();
+    audio.pause();
+});
