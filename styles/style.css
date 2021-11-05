@@ -17,6 +17,7 @@ form label, button{
     flex-direction: column;
     align-items: center;
     margin: 10px;
+    
 }
 footer{
     display: flex;
@@ -28,9 +29,18 @@ footer{
     background-color: #4D9078;
     height: 50px;
 }
+
 header{
     background-color: #4D9078;
     width: 100vw;
     display: flex;
     justify-content: center;
+    align-content: center;
+    display: flex;
+    justify-content: center;
+    text-size-adjust: 80%;
+    font-size: 80%;
+}
+p{
+    width: 350px;
 }

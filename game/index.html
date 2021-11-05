@@ -5,9 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  
     <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap" rel="stylesheet">
-
     <link rel="stylesheet" href="../styles/reset.css">
     <!-- <link rel="stylesheet" href="../styles/style.css"> -->
     <link rel="stylesheet" href="../styles/home.css">
@@ -18,11 +16,11 @@
     <header>
         <a href="../index.html">Texas Hold-em!</a>
     </header>
-    <div id="player-stats">
-        <span id="name"></span>
-        <span id="soul-count"></span>
-    </div>
     <main>
+        <div id="player-stats">
+            <span id="name"></span>
+            <span id="soul-count"></span>
+        </div>
         <section class="hidden" id="dealer-section">
             <div class="render-two" id="dealer-hand">
             </div>
@@ -30,9 +28,8 @@
         <section class="render-cards" id="face-down">
             <img src="../assets/cards/red-card.png">
             <img src="../assets/cards/red-card.png">
-            
         </section>
-
+        
         <section class="hidden" id="table-section">
             <div class="render-cards" id="table-hand">
             </div>
@@ -50,13 +47,15 @@
             <span id="results"></span>
         </div>
         <button id="deal-button">Deal Hand</button>
-        <button class="hidden" id="play-again-button">Play Again!</button>
+        <div class="play-again-container">
+            <button class="hidden" id="play-again-button">Play Again!</button>
+        </div>
         <form id="bet-form">
             <input id="bet-input"type="number" min="1" max="50" name="bet-amount">
             <button id="bet-button">Bet</button>
         </form>
     </main>
-        
+    <audio id="audio" src="../assets/mad-world.mp3" controls></audio>
     <footer>
         <a href="../about/index.html">About Us Page</a>
     </footer>

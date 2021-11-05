@@ -58,7 +58,6 @@ export function tableFlop(deck){
     }
 }
 
-
 export function tableTurn(deck){
     for (let item of deck){
         const table = document.getElementById('table-turn');
@@ -78,7 +77,6 @@ export function tableTurn(deck){
         table.append(div);
     }
 }
-
 
 export function tableRiver(deck){
     for (let item of deck){
