@@ -106,5 +106,7 @@ export function shuffle(array) {
         [array[currentIndex], array[randomIndex]] = [
             array[randomIndex], array[currentIndex]];
     }
+    console.log(array);
     return array;
+    
 }

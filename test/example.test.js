@@ -351,7 +351,7 @@ test('checking to see if the pair functio nis working, 4 of a kind', (expect) =>
         number: '8',
         image: '../assets/cards/8C.png',
     }];
-    const expected = 'four-of-a-kind';
+    const expected = 'four-of-a-kind 6';
     const actual = check4Pair(minideck);
 
     expect.equal(actual, expected);
@@ -394,7 +394,7 @@ test('checking to see if the pair function is working, 3 of a kind', (expect) =>
         number: '10',
         image: '../assets/cards/8C.png',
     }];
-    const expected = 'three-of-a-kind';
+    const expected = 'three-of-a-kind 6';
     const actual = check3Pair(minideck);
 
     expect.equal(actual, expected);
@@ -480,7 +480,7 @@ test('checking to see if the pair functio nis working, pair', (expect) => {
         number: '8',
         image: '../assets/cards/8C.png',
     }];
-    const expected = 'pair';
+    const expected = 'pair 8';
     const actual = checkPair(minideck);
 
     expect.equal(actual, expected);
