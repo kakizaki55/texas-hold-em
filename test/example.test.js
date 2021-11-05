@@ -1,5 +1,5 @@
 
-import { createHand, createFlop, createTurn, checkFlush, check4Pair, check3Pair, checkPair, checkStright, check2Pair } from '../game/game-utils.js';
+import { createHand, createFlop, createTurn, checkFlush, check4Pair, check3Pair, checkPair, checkStraight, check2Pair } from '../game/game-utils.js';
 // import { playerHand } from '../game/game.js'
 
 
@@ -524,7 +524,7 @@ test('checking to see if check straight function is working', (expect) => {
         image: '../assets/cards/8C.png',
     }];
     const expected = 'straight';
-    const actual = checkStright(minideck);
+    const actual = checkStraight(minideck);
 
     expect.equal(actual, expected);
 });
@@ -567,7 +567,7 @@ skip('checking to see if check straight function is working', (expect) => {
         image: '../assets/cards/8C.png',
     }];
     const expected = 'straight';
-    const actual = checkStright(minideck);
+    const actual = checkStraight(minideck);
 
     expect.equal(actual, expected);
 });
@@ -610,7 +610,7 @@ test('checking to see if check straight function is working (mini straight)', (e
         image: '../assets/cards/8C.png',
     }];
     const expected = undefined;
-    const actual = checkStright(minideck);
+    const actual = checkStraight(minideck);
 
     expect.equal(actual, expected);
 });
