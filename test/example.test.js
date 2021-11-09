@@ -5,7 +5,12 @@ import { createHand, createFlop, createTurn, checkFlush, check4Pair, check3Pair,
 
 const test = QUnit.test;
 const skip = QUnit.skip;
-test('generate a hand, two cards outof the array and removce them from array', (expect) => {
+
+// this is just a suggestion, but I liked to use the following style
+// when testing multiple functions in the same file so its clear from the 
+// test description exactly which function I'm testing
+
+test('#createHand should return two cards from the array', (expect) => {
     const minideck = [{
         id: 1,
         suit: 'club',
@@ -57,7 +62,7 @@ test('generate a hand, two cards outof the array and removce them from array', (
 
     expect.deepEqual(actual, expected);
 });
-test('makeing sure the card is actually takin outo of the array ', (expect) => {
+test('#createHand should remove the two cards from the array', (expect) => {
     const minideck = [{
         id: 1,
         suit: 'club',
@@ -121,7 +126,7 @@ test('makeing sure the card is actually takin outo of the array ', (expect) => {
     expect.deepEqual(actual, expected);
 });
 
-test('generate three cards and take them out of the array', (expect) => {
+test('#createFlop should return three cards from the deck', (expect) => {
     const minideck = [{
         id: 1,
         suit: 'club',
@@ -176,7 +181,7 @@ test('generate three cards and take them out of the array', (expect) => {
     expect.deepEqual(actual, expected);
 });
 
-test('generate one card and take them out of the array', (expect) => {
+test('#createFlop should return one card from the deck', (expect) => {
     const minideck = [{
         id: 1,
         suit: 'club',
@@ -221,7 +226,7 @@ test('generate one card and take them out of the array', (expect) => {
     expect.deepEqual(actual, expected);
 });
 
-test('checking to see if there is a flush and returns a string', (expect) => {
+test('#checkFlush should return a string if there is a flush', (expect) => {
     const minideck = [{
         id: 1,
         suit: 'club',
@@ -267,7 +272,7 @@ test('checking to see if there is a flush and returns a string', (expect) => {
 
 });
 
-test('checking to see if it returns an empty string', (expect) => {
+test('#checkFlush should return undefined if no flush', (expect) => {
     const minideck = [{
         id: 1,
         suit: 'club',

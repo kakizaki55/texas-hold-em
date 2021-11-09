@@ -1,1 +1,1 @@
-console.log('making usre the about us page is working');
+// doesn't look like you need this file
