@@ -1,3 +1,5 @@
+// these functions look really clean -- great job
+
 export function playerHand(deck){
     for (let item of deck){
         const playerTable = document.getElementById('player-hand');
@@ -106,7 +108,6 @@ export function shuffle(array) {
         [array[currentIndex], array[randomIndex]] = [
             array[randomIndex], array[currentIndex]];
     }
-    console.log(array);
     return array;
     
 }
